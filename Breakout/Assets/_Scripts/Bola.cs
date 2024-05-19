@@ -1,28 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bola : MonoBehaviour
 {
     public bool isGameStarted = false;
-    [SerializeField] public float velocidadBola = 10f;
-    // Start is called before the first frame update
-    void Start()
-    { // se busca el tag de Jugador y se suma unas unidades en eje Y, se asigna setparent para saber la herencia entre objetos
-        Vector3 posicionInicial = GameObject.FindGameObjectWithTag("Jugador").transform.position;
-        posicionInicial.y += 1;
-        this.transform.position = posicionInicial;
-        this.transform.SetParent(GameObject.FindGameObjectWithTag("Jugador").transform);
+    [SerializeField] public float velocidadBola = 10.0f;
+    Vector3 ultimaPosicion = Vector3.zero;
+    Vector3 direccion = Vector3.zero;
+    Rigidbody rigidbody;
+    private Control_Bordes control;
+    public UnityEvent BolaDestruida;
 
-        
+    private void Awake()
+    {
+        control = GetComponent<Control_Bordes>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    void Start()
     {
-        //si preciono tecla espacio y en caso de que el juego empiece la bola ya no es hijo del paddle y con el rigidbody de nuestra bola se inicie hacia arriba
-        //el submit sale del boton A en control
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButton("Submit"))
+        isGameStarted = false;
+        Vector3 posicionInicial = GameObject.FindGameObjectWithTag("Jugador").transform.position;
+        posicionInicial.y += 3;
+        this.transform.position = posicionInicial;
+        this.transform.SetParent(GameObject.FindGameObjectWithTag("Jugador").transform);
+        rigidbody = this.gameObject.GetComponent<Rigidbody>();
+
+    }
+
+
+
+    private void Update()
+    {
+        if (control.salioAbajo)
+        {
+            BolaDestruida.Invoke();
+            Destroy(this.gameObject);
+        }
+        if (control.salioArriba)
+        {
+            direccion = transform.position - ultimaPosicion;
+            Debug.Log("La bola toco el borde superior");
+            direccion.y *= -1;
+            direccion = direccion.normalized;
+            rigidbody.velocity = velocidadBola * direccion;
+            control.salioArriba = false;
+            control.enabled = false;
+            Invoke("HabilitarControl", 0.2f);
+        }
+        if (control.salioDerecha)
+        {
+            direccion = transform.position - ultimaPosicion;
+            Debug.Log("La bola toco el borde derecho");
+            direccion.x *= -1;
+            direccion = direccion.normalized;
+            rigidbody.velocity = velocidadBola * direccion;
+            control.salioDerecha = false;
+            control.enabled = false;
+            Invoke("HabilitarControl", 0.2f);
+
+        }
+        if (control.salioIzquierda)
+        {
+            direccion = transform.position - ultimaPosicion;
+            Debug.Log("La bola toco el borde izquierdo");
+            direccion.x *= -1;
+            direccion = direccion.normalized;
+            rigidbody.velocity = velocidadBola * direccion;
+            control.salioIzquierda = false;
+            control.enabled = false;
+            Invoke("HabilitarControl", 0.2f);
+
+        }
+        if (Input.GetKey(KeyCode.Space) || Input.GetButton("Submit"))
         {
             if (!isGameStarted)
             {
@@ -31,6 +84,34 @@ public class Bola : MonoBehaviour
                 GetComponent<Rigidbody>().velocity = velocidadBola * Vector3.up;
             }
         }
-        
+    }
+    private void HabilitarControl()
+    {
+        control.enabled = true;
+    }
+    private void FixedUpdate()
+    {
+        ultimaPosicion = transform.position;
+    }
+
+    public void LateUpdate()
+    {
+        if (direccion != Vector3.zero) direccion = Vector3.zero;
+        {
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

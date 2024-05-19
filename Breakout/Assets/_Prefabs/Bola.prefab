@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3835103644335553131}
   - component: {fileID: 2394756579454397307}
   - component: {fileID: 3755780785135021107}
-  - component: {fileID: 3912857864798418012}
   - component: {fileID: 6551450387691230847}
   m_Layer: 0
   m_Name: Bola
@@ -107,20 +106,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3912857864798418012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4562483369881665051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559c1265939614e4aa0b0651453bbf38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGameStarted: 0
-  velocidadBola: 10
 --- !u!54 &6551450387691230847
 Rigidbody:
   m_ObjectHideFlags: 0
