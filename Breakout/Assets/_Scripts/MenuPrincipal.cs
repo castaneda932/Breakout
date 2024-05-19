@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
@@ -28,8 +27,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void MostarMenuIncial() 
     { 
-        MenuInicial.SetActive(true);
-        MenuOpciones.SetActive(false);
+        MenuInicial.SetActive(false);
+        MenuOpciones.SetActive(true);
     }
    
 }
