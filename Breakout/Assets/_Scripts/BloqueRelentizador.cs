@@ -15,4 +15,8 @@ public class BloqueRelentizador : Bloque
     {
         
     }
+    public override void RebotarBola()
+    {
+        base.RebotarBola();
+    }
 }

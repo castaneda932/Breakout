@@ -15,4 +15,8 @@ public class BloqueExplosivo : Bloque
     {
         
     }
+    public override void RebotarBola()
+    {
+        base.RebotarBola();
+    }
 }
