@@ -11,7 +11,6 @@ public class Puntaje : MonoBehaviour
     public TMP_Text textoActual;
     public PuntajeAlto puntajeAltoSO;
     
-    
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +19,14 @@ public class Puntaje : MonoBehaviour
         transformPuntajeAlto = GameObject.Find("PuntajeAlto").transform;
         textoActual = transformPuntajeActual.GetComponent<TMP_Text>();
         textoPuntajeAlto = transformPuntajeAlto.GetComponent<TMP_Text>();
-
-        if (PlayerPrefs.HasKey("PuntajeAlto"))
-        {
-            //puntajeAlto = PlayerPrefs.GetInt("PuntajeAlto");
-            textoPuntajeAlto.text = $"PuntajeAlto: {puntajeAltoSO}";
-        }
+        //manera de guardar puntaje por medio de playerprefs
+        //if (PlayerPrefs.HasKey("PuntajeAlto"))
+        //{
+        //puntajeAlto = PlayerPrefs.GetInt("PuntajeAlto");
+        //}
+        puntajeAltoSO.Cargar();
+        textoPuntajeAlto.text = $"PuntajeAlto :{puntajeAltoSO.puntajeAlto}";
+        puntajeAltoSO.puntaje = 0;
     }
 
     private void FixedUpdate()
@@ -35,13 +36,19 @@ public class Puntaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // si el puntaje actual es mayor la puntaje alto se modificara
-        textoActual.text = $"PuntajeActual: {puntajeAltoSO.puntajeAlto}";
-        if (puntajeAltoSO.puntaje > puntajeAltoSO.puntajeAlto)
+        textoActual.text = $"PuntajeActual: {puntajeAltoSO.puntaje}";
+        if (puntajeAltoSO.puntaje > puntajeAltoSO.puntajeAlto) 
         {
             puntajeAltoSO.puntajeAlto = puntajeAltoSO.puntaje;
             textoPuntajeAlto.text = $"PuntajeAlto: {puntajeAltoSO.puntajeAlto}";
+            puntajeAltoSO.Guardar();
             //PlayerPrefs.SetInt("PuntajeAlto", puntos);
         }
+ 
+    }
+
+    public void AumentarPuntaje(int puntos)
+    {
+        puntajeAltoSO.puntaje += puntos;
     }
 }
