@@ -27,8 +27,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void MostarMenuIncial() 
     { 
-        MenuInicial.SetActive(false);
-        MenuOpciones.SetActive(true);
+        MenuInicial.SetActive(true);
+        MenuOpciones.SetActive(false);
     }
    
 }
