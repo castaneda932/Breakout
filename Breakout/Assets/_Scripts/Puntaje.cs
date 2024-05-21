@@ -31,7 +31,7 @@ public class Puntaje : MonoBehaviour
 
     private void FixedUpdate()
     {
-        puntajeAltoSO.puntaje += 50;
+       
     }
     // Update is called once per frame
     void Update()

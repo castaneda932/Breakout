@@ -6,6 +6,9 @@ using UnityEngine;
 
 public abstract class PuntajePersistente : ScriptableObject
 {
+    //system.io accede a nuestro disco duro
+    //using System.Runtime.Serialization.Formatters.Binary; sirve para guardar en formato binario por seguridad
+
     // Start is called before the first frame update
     public void Guardar(string NombreArchivo = null)
     {
