@@ -25,7 +25,7 @@ public class MenuPausa : MonoBehaviour
     }
     public void MostarMenuOpciones()
     {
-        menuPausa.SetActive(false );
-        menuOpciones.SetActive(true );
+        menuPausa.SetActive(false);
+        menuOpciones.SetActive(true);
     }
 }
