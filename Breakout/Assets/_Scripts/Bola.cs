@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Bola : MonoBehaviour
 {
     public bool isGameStarted = false;
-    [SerializeField] public float velocidadBola = 10.0f;
+    [SerializeField] public float velocidadBola = 15.0f;
     Vector3 ultimaPosicion = Vector3.zero;
     Vector3 direccion = Vector3.zero;
     Rigidbody rigidbody;

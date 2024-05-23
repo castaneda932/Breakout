@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jugador : MonoBehaviour
 {
     [SerializeField] public float limiteX = 7.3f;
-    [SerializeField] public float VelocidadPaddle = 20f;
+    [SerializeField] public float VelocidadPaddle = 15f;
     new Transform transform;
     Vector3 mousePos2D;
     Vector3 mousePos3D;

@@ -10,11 +10,7 @@ public class BloqueRelentizador : Bloque
         resistencia = 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public override void RebotarBola()
     {
         base.RebotarBola();
