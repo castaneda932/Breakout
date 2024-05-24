@@ -9742,6 +9742,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1691910713}
     m_Modifications:
     - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: Opciones
+      value: 
+      objectReference: {fileID: 429078071}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
       propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 963194231}
