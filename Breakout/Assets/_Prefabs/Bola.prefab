@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameStarted: 0
-  velocidadBola: 10
+  velocidadBola: 15
   BolaDestruida:
     m_PersistentCalls:
       m_Calls:

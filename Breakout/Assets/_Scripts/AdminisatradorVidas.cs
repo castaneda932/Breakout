@@ -17,6 +17,7 @@ public class AdminisatradorVidas : MonoBehaviour
             vidas.Add(hijo.gameObject);
          
         }
+        vidas.RemoveAt(0);
     }
 
     
