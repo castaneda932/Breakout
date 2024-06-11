@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuFinNivel : MonoBehaviour
 {
+    
     public void SiguienteNivel()
     {
         var siguienteNivel = SceneManager.GetActiveScene().buildIndex + 1;
-        if(SceneManager.sceneCountInBuildSettings > siguienteNivel)
+        if (SceneManager.sceneCountInBuildSettings > siguienteNivel)
         {
             SceneManager.LoadScene(siguienteNivel);
         }
@@ -18,8 +19,7 @@ public class MenuFinNivel : MonoBehaviour
         {
             CargarMenuPrincipal();
         }
-
-        
+       
     }
     public void CargarMenuPrincipal()
     {

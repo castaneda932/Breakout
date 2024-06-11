@@ -9148,6 +9148,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
+      propertyPath: velocidadBola
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
+      propertyPath: opcionesDelJuego
+      value: 
+      objectReference: {fileID: 11400000, guid: bf26bcd158d18de4ca218c0fc101d6cb, type: 2}
+    - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
       propertyPath: BolaDestruida.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1346745567}

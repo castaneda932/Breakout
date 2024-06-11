@@ -1263,6 +1263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjetoAGuardar:
   - {fileID: 11400000, guid: 41b08e1769032f241b560d7423459ad3, type: 2}
+  - {fileID: 11400000, guid: bf26bcd158d18de4ca218c0fc101d6cb, type: 2}
 --- !u!4 &344816920
 Transform:
   m_ObjectHideFlags: 0
@@ -9147,6 +9148,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
+      propertyPath: velocidadBola
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
+      propertyPath: opcionesDelJuego
+      value: 
+      objectReference: {fileID: 11400000, guid: bf26bcd158d18de4ca218c0fc101d6cb, type: 2}
     - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
       propertyPath: BolaDestruida.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

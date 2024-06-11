@@ -13,6 +13,7 @@ public class Bola : MonoBehaviour
     Rigidbody rigidbody;
     private Control_Bordes control;
     public UnityEvent BolaDestruida;
+    public ScriptableObject opcionesDelJuego;
 
     private void Awake()
     {
