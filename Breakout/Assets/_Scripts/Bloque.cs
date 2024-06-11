@@ -9,6 +9,7 @@ public class Bloque : MonoBehaviour
 {
     public int resistencia = 1;
     public UnityEvent AumentarPuntaje;
+    public ScriptableObject opcionesDelJuego;
 
     //sirve para disparar cada que un objeto choque con el collider de este bloque
     public void OnCollisionEnter(Collision collision)

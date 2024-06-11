@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BloqueMadera : Bloque
 {
+    
     // Start is called before the first frame update
     void Start()
     {
