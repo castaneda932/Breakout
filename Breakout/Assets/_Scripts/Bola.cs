@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Bola : MonoBehaviour
 {
     public bool isGameStarted = false;
-    [SerializeField] public float velocidadBola = 15.0f;
+    [SerializeField] public float velocidadBola;
     Vector3 ultimaPosicion = Vector3.zero;
     Vector3 direccion = Vector3.zero;
-    Rigidbody rigidbody;
+    Rigidbody rigidbody2;
     private Control_Bordes control;
     public UnityEvent BolaDestruida;
-    public ScriptableObject opcionesDelJuego;
+    public Opciones opciones;
 
     private void Awake()
     {
@@ -28,7 +29,8 @@ public class Bola : MonoBehaviour
         posicionInicial.y += 3;
         this.transform.position = posicionInicial;
         this.transform.SetParent(GameObject.FindGameObjectWithTag("Jugador").transform);
-        rigidbody = this.gameObject.GetComponent<Rigidbody>();
+        rigidbody2 = this.gameObject.GetComponent<Rigidbody>();
+        
 
     }
 
@@ -36,6 +38,8 @@ public class Bola : MonoBehaviour
 
     private void Update()
     {
+        
+
         if (control.salioAbajo)
         {
             BolaDestruida.Invoke();
@@ -47,7 +51,7 @@ public class Bola : MonoBehaviour
             Debug.Log("La bola toco el borde superior");
             direccion.y *= -1;
             direccion = direccion.normalized;
-            rigidbody.velocity = velocidadBola * direccion;
+            rigidbody2.velocity = velocidadBola * direccion;
             control.salioArriba = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
@@ -58,7 +62,7 @@ public class Bola : MonoBehaviour
             Debug.Log("La bola toco el borde derecho");
             direccion.x *= -1;
             direccion = direccion.normalized;
-            rigidbody.velocity = velocidadBola * direccion;
+            rigidbody2.velocity = velocidadBola * direccion;
             control.salioDerecha = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
@@ -70,7 +74,7 @@ public class Bola : MonoBehaviour
             Debug.Log("La bola toco el borde izquierdo");
             direccion.x *= -1;
             direccion = direccion.normalized;
-            rigidbody.velocity = velocidadBola * direccion;
+            rigidbody2.velocity = velocidadBola * direccion;
             control.salioIzquierda = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
@@ -78,11 +82,14 @@ public class Bola : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space) || Input.GetButton("Submit"))
         {
+            
             if (!isGameStarted)
             {
                 isGameStarted = true;
                 this.transform.SetParent(null);
-                GetComponent<Rigidbody>().velocity = velocidadBola * Vector3.up;
+                //GetComponent<Rigidbody>().velocity = velocidadBola * Vector3.up;
+                
+                GetComponent<Rigidbody>().velocity = new Vector2(opciones.velocidadBola, opciones.velocidadBola);
             }
         }
     }

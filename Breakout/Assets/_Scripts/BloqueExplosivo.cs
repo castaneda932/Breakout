@@ -10,11 +10,7 @@ public class BloqueExplosivo : Bloque
         resistencia = 3;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     public override void RebotarBola()
     {
         base.RebotarBola();
