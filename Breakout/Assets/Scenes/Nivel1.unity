@@ -4335,6 +4335,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Intermedio
       m_Image: {fileID: 0}
+    - m_Text: Dificil
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -9141,14 +9143,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
-      propertyPath: velocidadBola
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
-      propertyPath: opcionesDelJuego
-      value: 
-      objectReference: {fileID: 11400000, guid: bf26bcd158d18de4ca218c0fc101d6cb, type: 2}
-    - target: {fileID: 8410232680469665811, guid: fa8da4b4fc3de7c428487adb9486696f, type: 3}
       propertyPath: BolaDestruida.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1346745567}
@@ -9837,10 +9831,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1691910713}
     m_Modifications:
-    - target: {fileID: -523077550726707356, guid: 474049262bb0da240b5a087e34460fa6, type: 3}
-      propertyPath: resistencia
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: -523077550726707356, guid: 474049262bb0da240b5a087e34460fa6, type: 3}
       propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
