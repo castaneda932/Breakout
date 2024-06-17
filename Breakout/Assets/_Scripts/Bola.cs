@@ -15,6 +15,7 @@ public class Bola : MonoBehaviour
     private Control_Bordes control;
     public UnityEvent BolaDestruida;
     public Opciones opciones;
+    
 
     private void Awake()
     {
@@ -51,7 +52,7 @@ public class Bola : MonoBehaviour
             Debug.Log("La bola toco el borde superior");
             direccion.y *= -1;
             direccion = direccion.normalized;
-            rigidbody2.velocity = velocidadBola * direccion;
+            rigidbody2.velocity = opciones.velocidadBola * direccion;
             control.salioArriba = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
@@ -62,7 +63,7 @@ public class Bola : MonoBehaviour
             Debug.Log("La bola toco el borde derecho");
             direccion.x *= -1;
             direccion = direccion.normalized;
-            rigidbody2.velocity = velocidadBola * direccion;
+            rigidbody2.velocity = opciones.velocidadBola * direccion;
             control.salioDerecha = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
@@ -74,7 +75,7 @@ public class Bola : MonoBehaviour
             Debug.Log("La bola toco el borde izquierdo");
             direccion.x *= -1;
             direccion = direccion.normalized;
-            rigidbody2.velocity = velocidadBola * direccion;
+            rigidbody2.velocity = opciones.velocidadBola * direccion;
             control.salioIzquierda = false;
             control.enabled = false;
             Invoke("HabilitarControl", 0.2f);
@@ -88,8 +89,8 @@ public class Bola : MonoBehaviour
                 isGameStarted = true;
                 this.transform.SetParent(null);
                 //GetComponent<Rigidbody>().velocity = velocidadBola * Vector3.up;
-                
-                GetComponent<Rigidbody>().velocity = new Vector2(opciones.velocidadBola, opciones.velocidadBola);
+
+                GetComponent<Rigidbody>().velocity = opciones.velocidadBola * Vector2.up;
             }
         }
     }

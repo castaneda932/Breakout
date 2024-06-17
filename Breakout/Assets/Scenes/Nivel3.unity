@@ -3867,10 +3867,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33403eda49e7afd4394238a4399ac1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformPuntajeAlto: {fileID: 0}
-  transformPuntajeActual: {fileID: 0}
-  textoPuntajeAlto: {fileID: 0}
-  textoActual: {fileID: 0}
+  transformPuntajeAlto: {fileID: 1747335287}
+  transformPuntajeActual: {fileID: 1739304591}
+  textoPuntajeAlto: {fileID: 1747335288}
+  textoActual: {fileID: 1739304592}
   puntajeAltoSO: {fileID: 11400000, guid: da5da437850f3c04ea0fea26208bcf9f, type: 2}
 --- !u!114 &963194232
 MonoBehaviour:

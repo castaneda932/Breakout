@@ -26,7 +26,7 @@ public class Bloque : MonoBehaviour
     {
         Vector3 direccion = collision.contacts[0].point - transform.position;
         direccion = direccion.normalized;
-        collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direccion;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().opciones.velocidadBola * direccion;
         resistencia--;
     }
     // Start is called before the first frame update
