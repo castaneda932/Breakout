@@ -1,6 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,7 +9,7 @@ public class Bloque : MonoBehaviour
 {
     public int resistencia = 1;
     public UnityEvent AumentarPuntaje;
-    public ScriptableObject opcionesDelJuego;
+    public Opciones opcionesDelJuego;
 
     //sirve para disparar cada que un objeto choque con el collider de este bloque
     public void OnCollisionEnter(Collision collision)
@@ -32,14 +32,15 @@ public class Bloque : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (resistencia <= 0)
         {
+            AumentarPuntaje.Invoke();
             Destroy(this.gameObject);
         }
 

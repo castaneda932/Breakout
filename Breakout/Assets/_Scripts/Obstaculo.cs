@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Obstaculo : MonoBehaviour
 {
+    Rigidbody rb;
+    public Opciones Opciones;
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bola")
@@ -15,7 +17,7 @@ public class Obstaculo : MonoBehaviour
     {
         Vector3 direccion = collision.contacts[0].point - transform.position;
         direccion = direccion.normalized;
-        collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direccion;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().opciones.velocidadBola * direccion;
         
     }
     public virtual void RebotarBola()
