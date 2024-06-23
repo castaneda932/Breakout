@@ -28,6 +28,7 @@ public class Opciones : PuntajePersistente
     public void cambiarDificultad(float nuevaDificultad)
     {
         nivelDificultad = (dificultad)nuevaDificultad;
+        
     }
 
 }
