@@ -11,19 +11,19 @@ public class Bloque : MonoBehaviour
     public UnityEvent AumentarPuntaje;
     public Opciones opcionesDelJuego;
 
-    public void Awake()
+    public void CambioDeResistenciaConDificultad()
     {
         if( opcionesDelJuego.nivelDificultad == Opciones.dificultad.facil)
         {
-            resistencia = resistencia + 1;
+            this.resistencia = this.resistencia + 1;
         }
-        if (opcionesDelJuego.nivelDificultad == Opciones.dificultad.normal)
+        else if (opcionesDelJuego.nivelDificultad == Opciones.dificultad.normal)
         {
-            resistencia = resistencia + 2;
+            this.resistencia = this.resistencia + 2;
         }
-        if (opcionesDelJuego.nivelDificultad == Opciones.dificultad.dificil)
+        else if (opcionesDelJuego.nivelDificultad == Opciones.dificultad.dificil)
         {
-            resistencia = resistencia * 2;
+            this.resistencia = this.resistencia * 2;
         }
     }
     //sirve para disparar cada que un objeto choque con el collider de este bloque
