@@ -9766,9 +9766,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 1691910713}
     m_Modifications:
     - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
       propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 963194231}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1608940826028079182}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CambioDeResistenciaConDificultad
+      objectReference: {fileID: 0}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Bloque, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+      propertyPath: AumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3947539911334982874, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -275.54
@@ -9823,6 +9855,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3947539911334982874, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
   m_PrefabInstance: {fileID: 1608940826028079180}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1608940826028079182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 774520774130229873, guid: 8447e12727ff2b94e8b2db420fe82f12, type: 3}
+  m_PrefabInstance: {fileID: 1608940826028079180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e22d7bee0a10ac478043c4f00c4c089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4189916757825305880
 PrefabInstance:
   m_ObjectHideFlags: 0
